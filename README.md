@@ -34,7 +34,7 @@ Through a digital platform named Farm-RAMIP (Rwanda Agriculture Market Integrati
 ## GitHub Repository
 
 
-Repository URL: https://github.com/Idiane05/farm-ramip-platform
+Repository URL:https://github.com/Idiane05/ramip-farm.git
 
 
 ## How to Set Up Environment & Project
