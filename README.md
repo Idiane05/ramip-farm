@@ -56,7 +56,7 @@ VS Code (recommended) - Download
 #### 1. Clone the repository:
 
 ```
-git clone https://github.com/Idiane05/farm-ramip-platform.git
+git clone https://github.com/Idiane05/ramip-farm.git
 
 cd farm-ramip-platform
 
@@ -332,7 +332,3 @@ Advanced caching strategies
 # Video Demo
 
  View my video demo : https://go.screenpal.com/watch/cT6XDdnblrC
-
-
-
-
