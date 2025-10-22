@@ -170,8 +170,8 @@ const UserViewCart: React.FC = () => {
       const profile: any = await dispatch(fetchUserProfile());
       const data = {
         successUrl:
-          "https://agri-tech-rw-fn-001.netlify.app/shopping-cart?success",
-        cancelUrl: "https://agri-tech-rw-fn-001.netlify.app/shopping-cart?cancel",
+          "https://ramip-farm.onrender.com/shopping-cart?success",
+        cancelUrl: "https://ramip-farm.onrender.com/shopping-cart?cancel",
         customerEmail: profile.payload.email,
         price: localStorage.getItem("stripePrice"),
       };
