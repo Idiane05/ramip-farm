@@ -251,7 +251,7 @@ const ProductDetails = ({
       </div>
       <div className="product-price-container">
         <div className="product-price">
-          {product.price.toLocaleString()} RWF
+          {product.price.toLocaleString()} RWF per kg
         </div>
         <div className="discount-label-container">
           <div className="discount-label">

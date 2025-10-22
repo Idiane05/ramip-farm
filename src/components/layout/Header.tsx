@@ -29,10 +29,13 @@ import { toast } from "react-toastify";
 import { PulseLoader } from "react-spinners";
 import HomePage from "./HomePage";
 import { getToken } from "../../utils/protectRoute/ProtectedRoute";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -137,20 +140,20 @@ const Header: React.FC = () => {
         <div className="header__content">
           <div className="header__box header__location">
             <FaLocationDot className="header__icon" />
-            <p className="header__text">Our office</p>
-            <p className="header__description">RN4 Rd, Musanze, Rwanda</p>
+            <p className="header__text">{t('header.ourOffice')}</p>
+            <p className="header__description">{t('header.officeLocation')}</p>
           </div>
           <div className="header__box header__mail">
             <div className="header__icon">
               <IoMdMailUnread className="header__icon" />
             </div>
-            <p className="header__text">Email us</p>
-            <p className="header__description">farm001@gmail.com</p>
+            <p className="header__text">{t('header.emailUs')}</p>
+            <p className="header__description">{t('header.email')}</p>
           </div>
           <div className="header__box header__contact">
             <FaPhoneVolume className="header__icon" />
-            <p className="header__text">Contact us</p>
-            <p className="header__description">+250788888888</p>
+            <p className="header__text">{t('header.contactUs')}</p>
+            <p className="header__description">{t('header.phone')}</p>
           </div>
         </div>
       </div>
@@ -216,7 +219,7 @@ const Header: React.FC = () => {
                   </div>
                 )}
                 <div className="cart_box_info">
-                  <span className="cart__text">Cart</span>
+                  <span className="cart__text">{t('header.cart')}</span>
                   <span className="cart__description">
                     {isAuthenticated
                       ? cartTotalMoney !== null
@@ -241,11 +244,11 @@ const Header: React.FC = () => {
               ) : (
                 <FaRegUser className="cart__icon-user" />
               )}
-              <span className="cart__text">{user ? "Hi, " : "User"}</span>
+              <span className="cart__text">{user ? t('header.hi') : t('header.user')}</span>
               <span className="cart__description">
                 {user
                   ? formatName(user?.firstName || user?.email?.split("@")[0])
-                  : "Account"}
+                  : t('header.account')}
               </span>
               {isAuthenticated && isOpen2 && (
                 <div className="order__dropdown">
@@ -253,25 +256,25 @@ const Header: React.FC = () => {
                     <li>
                       <NavLink to="/my-orders" className="order__link">
                         <FaBuildingCircleCheck className="order__icon" />
-                        <span className="order__text">My Orders</span>
+                        <span className="order__text">{t('header.myOrders')}</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/wishlist" className="order__link">
                         <FaBuildingCircleCheck className="order__icon" />
-                        <span className="order__text">WishList</span>
+                        <span className="order__text">{t('header.wishlist')}</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/profile-settings" className="order__link">
                         <FaUserClock className="order__icon" />
-                        <span className="order__text">Profile Settings</span>
+                        <span className="order__text">{t('header.profileSettings')}</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/logout" className="order__link">
                         <IoLogOutSharp className="order__icon" />
-                        <span className="order__text">Logout</span>
+                        <span className="order__text">{t('header.logout')}</span>
                       </NavLink>
                     </li>
                   </ul>
@@ -328,7 +331,7 @@ const Header: React.FC = () => {
                       to="/home"
                       className={({ isActive }) => (isActive ? "active" : "")}
                     >
-                      Home
+                      {t('header.home')}
                     </NavLink>
                   </li>
                 <li className="nav__item" onClick={handleSetIsMenuOpen}>
@@ -336,7 +339,7 @@ const Header: React.FC = () => {
                     to="/shops"
                     className={({ isActive }) => (isActive ? "active" : "")}
                   >
-                    Farms
+                    {t('header.farms')}
                   </NavLink>
                 </li>
                 <li className="nav__item" onClick={handleSetIsMenuOpen}>
@@ -350,7 +353,7 @@ const Header: React.FC = () => {
                           : ""
                     }
                   >
-                    Products
+                    {t('header.products')}
                   </NavLink>
                 </li>
                 <li className="nav__item" onClick={handleSetIsMenuOpen}>
@@ -358,7 +361,7 @@ const Header: React.FC = () => {
                     to="/services"
                     className={({ isActive }) => (isActive ? "active" : "")}
                   >
-                    Services
+                    {t('header.services')}
                   </NavLink>
                 </li>
                 <li className="nav__item" onClick={handleSetIsMenuOpen}>
@@ -366,7 +369,7 @@ const Header: React.FC = () => {
                     to="/contact-us"
                     className={({ isActive }) => (isActive ? "active" : "")}
                   >
-                    Contact-Us
+                    {t('header.contactUsNav')}
                   </NavLink>
                 </li>
                 <li className="nav__item" onClick={handleSetIsMenuOpen}>
@@ -374,7 +377,7 @@ const Header: React.FC = () => {
                     to="/about-us"
                     className={({ isActive }) => (isActive ? "active" : "")}
                   >
-                    About-us
+                    {t('header.aboutUs')}
                   </NavLink>
                 </li>
               </ul>

@@ -6,6 +6,7 @@ import { store } from "./store/store";
 import { ToastContainer } from'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'aos/dist/aos.css';
+import './i18n';
 import App from "./App";
 
 

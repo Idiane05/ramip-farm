@@ -23,10 +23,10 @@ const ContactUsPage: React.FC = () => {
         e.preventDefault();
         try {
             const result = await emailjs.sendForm(
-                'YOUR_SERVICE_ID',
-                'YOUR_TEMPLATE_ID',
+                'service_y7jl3g2',
+                'template_qdkx08d',
                 e.target as HTMLFormElement,
-                'YOUR_USER_ID'
+                'KfTj-8v3SMHR5OR3b'
             );
             console.log('Email sent successfully:', result.text);
             setFormData({

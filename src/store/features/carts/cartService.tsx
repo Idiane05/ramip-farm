@@ -66,7 +66,7 @@ const createStripeProduct = async (data) => {
       name: data.name,
       'images[0]': data.image1,
       'images[1]': data.image2,
-      url: 'http://localhost:5001',
+      url: 'https://ramip-farm.onrender.com',
       description: data.description,
       default_price_data: {
         unit_amount: data.unit_amount,

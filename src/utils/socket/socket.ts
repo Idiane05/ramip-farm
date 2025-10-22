@@ -2,7 +2,7 @@
 import { io } from 'socket.io-client';
 import { getToken } from '../protectRoute/ProtectedRoute';
 
-const socket = io('http://localhost:5001');
+const socket = io('https://ramip-farm-api.onrender.com');
 
 export const joinRoom = () => {
   const token = getToken();
