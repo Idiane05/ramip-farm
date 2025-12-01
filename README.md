@@ -58,7 +58,7 @@ VS Code (recommended) - Download
 ```
 git clone https://github.com/Idiane05/ramip-farm.git
 
-cd farm-ramip-platform
+cd ramip-farm
 
 ```
 
