@@ -54,7 +54,7 @@ export const SignUp = () => {
   useEffect(() => {
     if (isRegister) {
       toast.success(message);
-      navigate("/verify-email");
+      navigate("/login");
       formik.resetForm();
     }
   }, [user, isError, isRegister, isLoading, message, navigate]);
