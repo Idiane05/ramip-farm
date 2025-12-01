@@ -30,6 +30,11 @@ Through a digital platform named Farm-RAMIP (Rwanda Agriculture Market Integrati
 
 **Logistics Providers:** Transportation and delivery services
 
+## Changes made after Defense Panel feedback
+
+After receiving feedback from the defense panel, I made several improvements to enhance both the functionality and documentation of the project. The class diagram, ERD, use case diagram, and architectural diagram were reviewed, corrected, and redesigned to follow proper UML and system design standards. Additionally, broken links—including those pointing to localhost and external unrelated sites—were fixed to ensure smooth navigation and system consistency.
+
+The literature review was also strengthened by incorporating more academic sources and implementation frameworks related to e-commerce systems, stock management, authentication models, and digital agriculture platforms. These updates were made in direct response to the panel’s recommendations and have contributed to a more accurate, structured, and well-justified system.
 
 ## GitHub Repository
 
